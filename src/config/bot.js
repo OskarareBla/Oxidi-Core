@@ -25,7 +25,7 @@ export const botConfig = {
       {
         // Text users will see (example: "Playing /help | Titan Bot")
         name: "OxidizedSmp Community ❤", // required by Discord API, not shown in the client
-        state: "Online",     // this is what people actually see
+        state: "HELLO",     // this is what people actually see
         type: 3,               // Custom
       },
     ],
