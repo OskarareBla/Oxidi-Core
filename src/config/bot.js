@@ -1,5 +1,6 @@
 import { logger } from '../utils/logger.js';
 
+
 export const botConfig = {
   // =========================
   // BOT PRESENCE (what users see under the bot name)
@@ -24,9 +25,9 @@ export const botConfig = {
     activities: [
       {
         // Text users will see (example: "Playing /help | Titan Bot")
-        name: "OxidizedSmp Community ❤", // required by Discord API, not shown in the client
-        state: "HELLO",     // this is what people actually see
-        type: 3,               // Custom
+        name: "OxidizedSmp Community ❤",
+        // Activity type number (0・Playing).
+        type: 3,
       },
     ],
   },
