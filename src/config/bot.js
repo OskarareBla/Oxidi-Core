@@ -81,6 +81,32 @@ export const botConfig = {
     // Whether to ping @everyone when an announcement is created.
     pingEveryone: true,
   },
+  commands: {
+    owners: process.env.OWNER_IDS?.split(",")
+     .map((id) => id.trim())
+     .filter(Boolean) || [],
+
+  defaultCooldown: 3,
+
+  deleteCommands: false,
+
+  testGuildId: process.env.TEST_GUILD_ID,
+
+  maintenanceMode: process.env.MAINTENANCE_MODE === "true",
+
+  prefix: process.env.PREFIX || "!",
+
+  announce: {
+    requiredPermission: "Administrator",
+    title: "🔴 LIVE NOW!",
+    description:
+      "The stream is now live! Come join and show some support! ❤️",
+    buttonText: "🔴 WATCH STREAM",
+    color: "#FF0000",
+    channelId: null,
+    pingEveryone: true,
+  },
+},
 
   // =========================
   // APPLICATIONS SYSTEM
