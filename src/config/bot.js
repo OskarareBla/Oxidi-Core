@@ -58,6 +58,31 @@ export const botConfig = {
   },
 
   // =========================
+  // ANNOUNCEMENT COMMAND
+  // =========================
+  announce: {
+    // Only members with Administrator permission can use /announce.
+    requiredPermission: "Administrator",
+
+    // Default announcement styling.
+    title: "🔴 LIVE NOW!",
+    description:
+      "The stream is now live! Come join and show some support! ❤️",
+
+    buttonText: "🔴 WATCH STREAM",
+
+    // Embed color.
+    color: "#FF0000",
+
+    // Optional channel where announcements should be sent.
+    // null = send in the channel where /announce was used.
+    channelId: null,
+
+    // Whether to ping @everyone when an announcement is created.
+    pingEveryone: true,
+  },
+
+  // =========================
   // APPLICATIONS SYSTEM
   // =========================
   applications: {
