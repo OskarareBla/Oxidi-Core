@@ -107,25 +107,25 @@ export const botConfig = {
     pingEveryone: true,
   },
 },
-  import {
-    SlashCommandBuilder,
-    PermissionFlagsBits,
-    EmbedBuilder,
-    ActionRowBuilder,
-    ButtonBuilder,
-    ButtonStyle,
-  } from "discord.js";
+import {
+  SlashCommandBuilder,
+  PermissionFlagsBits,
+  EmbedBuilder,
+  ActionRowBuilder,
+  ButtonBuilder,
+  ButtonStyle,
+} from "discord.js";
 
-  export const data = new SlashCommandBuilder()
-    .setName("announce")
-    .setDescription("Announce that a stream is live.")
-    .addStringOption((option) =>
-      option
-        .setName("link")
-        .setDescription("The link to the live stream")
-        .setRequired(true)
-   )
-   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
+export const data = new SlashCommandBuilder()
+  .setName("announce")
+  .setDescription("Announce that a stream is live.")
+  .addStringOption((option) =>
+    option
+      .setName("link")
+      .setDescription("The link to the live stream")
+      .setRequired(true)
+  )
+  .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
 export async function execute(interaction, config) {
   const link = interaction.options.getString("link", true).trim();
