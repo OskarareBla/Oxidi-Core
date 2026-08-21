@@ -384,14 +384,15 @@ export const botConfig = {
     // Channel ID for goodbye messages.
     defaultGoodbyeChannel: null,
   },
+  
   import {
-  SlashCommandBuilder,
-  PermissionFlagsBits,
-  EmbedBuilder,
-  ActionRowBuilder,
-  ButtonBuilder,
-  ButtonStyle,
-} from "discord.js";
+    SlashCommandBuilder,
+    PermissionFlagsBits,
+    EmbedBuilder,
+    ActionRowBuilder,
+    ButtonBuilder,
+    ButtonStyle,
+  } from "discord.js";
 
 export const data = new SlashCommandBuilder()
   .setName("announce")
